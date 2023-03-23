@@ -8,7 +8,7 @@ export default function MovieCard(props) {
         <>
     <section className="movie-card" key={movie.imdbID} aria-label={`Movie details for ${movie.Title}`}>
         {/* Legger link rundt hele boksen slik at når man trykker på boksen kommer man til riktig film */}
-        {/* Sluggen er film tittel, kan endres til id eller noe annet passende */}
+        {/* Sluggen er film id eller imdbID */}
         <Link to={`/${movie.imdbID}`} key={movie.imdbID}>
             <img src={movie.Poster !== 'N/A' ? movie.Poster : 'https://www.popcorn.app/assets/app/images/placeholder-movieimage.png'} alt={movie.Title} />
             <h3>{movie.Title}</h3>
